@@ -29,7 +29,7 @@ useQuery는 `queryKey`, `queryFn` 두가지 인자값을 기본적으로 사용�
 | 인자       | 설명                                                              |
 | :--------- | :---------------------------------------------------------------- |
 | `queryKey` | useQuery 마다 부여되는 고유 key값입니다. query 캐싱을 관리합니다. |
-| `queryFn`  |                                                                   |
+| `queryFn`  | query Function으로 promise 처리가 이루어지는 함수                 |
 
 - useQuery 사용 예시 코드
 
