@@ -46,6 +46,16 @@ export const useTodoList = (params: TodoListFilter) => {
 query함수로 반환된 데이터의 일부를 변형하거나 선택할수 있다.
 반환되는 데이터의 값에 영향을 미치지만 쿼리 cache에 저장되는 값에는 영향을 미치지 않는다.
 
+- useQuery select 옵션 예시 코드
+
+```js
+export const useTodoList = (params: TodoListFilter) => {
+  return useQuery([TodoQueryKey.list], () => TodoService.list(params), {
+    select: (todo) => todo.filter(filterLigic),
+  });
+};
+```
+
 ## 3. useQueries
 
 여러개의 useQueries를 한번에 실행하고자 하는 경우 기존의 promise.all()처럼 묶어서 사용할수 있다.
