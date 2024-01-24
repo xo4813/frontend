@@ -3,7 +3,7 @@
 
 1. mui 
 
-2. react-query
+2. [react-query](https://github.com/xo4813/frontend/blob/main/react-query.md)
  
 3. class-transformer
 
