@@ -1,11 +1,10 @@
 # react-query
 
-데이터 Fetching, 캐싱, 동기화, 서버쪽 데이터 업데이트 등을 쉽게 만들어 주는 React 라이브러리 
+데이터 Fetching, 캐싱, 동기화, 서버쪽 데이터 업데이트 등을 쉽게 만들어 주는 React 라이브러리
 
 ## 1. 사용법
 
-react-query을 사용하기 위해서는 우선 사용하고자 하는 컴포넌트를  
-QueryClientProvider 컴포넌트로 감싸주고 QueryClient 값을 props로 넣어주어야 한다.  
+react-query을 사용하기 위해서는 우선 사용하고자 하는 컴포넌트를 QueryClientProvider 컴포넌트로 감싸주고 QueryClient 값을 props로 넣어주어야 한다.  
 만약 앱 전체에 사용하고자 한다면 최상의 컴포넌트에 감싸주면 된다.
 
 - 최상위 컴포넌트 감싸는 예시 코드
