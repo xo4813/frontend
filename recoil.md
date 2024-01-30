@@ -29,3 +29,51 @@ const todoState = atom({
   default: 14,
 });
 ```
+
+## useRecoilState
+
+useRecoilState hook은 atom의 state를 get,set 할수있게 해줍니다
+
+```js
+const [fontSize, setFontSize] = useRecoilState(fontsizeState);
+```
+
+## useRecoilValue
+
+useRecoilValue hook은 atom의 state를 get 할수있게 해줍니다
+
+```js
+const fontSize = useRecoilValue(fontsizeState);
+```
+
+## useSetRecoilValue
+
+useSetRecoilValue hook은 atom의 state를 set 할수있게 해줍니다
+
+```js
+const setFontSize = useSetRecoilValue(fontsizeState);
+```
+
+## Selector
+
+state 데이터 가공이 필요할경우 사용한다, get 프로퍼티를 사용하여
+state를 가공후 반환할수 있다.
+
+```js
+const filteredTodoListState = selector({
+  key: "filteredTodoListState",
+  get: ({ get }) => {
+    const filter = get(todoListFilterState);
+    const list = get(todoListState);
+
+    switch (filter) {
+      case "Show Completed":
+        return list.filter((item) => item.isComplete);
+      case "Show Uncompleted":
+        return list.filter((item) => !item.isComplete);
+      default:
+        return list;
+    }
+  },
+});
+```
