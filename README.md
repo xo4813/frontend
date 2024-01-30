@@ -9,7 +9,7 @@
 
 4. nextjs
 
-5. recoil
+5. [recoil](https://github.com/xo4813/frontend/blob/main/recoil.md)
 
 6. typeScript
 
